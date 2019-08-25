@@ -2,9 +2,17 @@
      public int first;
      public IntList rest;
 
-    public IntList(int f,IntList r){
+    public IntList(int f,IntList r,){
         first = f;
         rest = r;
+
+    }
+    public int get(int i ){
+        if(i == 0){
+            return first;
+        }
+        return 1 + rest.get(i - 1);
+    
     }
 
     public int size(){
