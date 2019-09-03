@@ -6,7 +6,7 @@ public class Alist{
     //the stored integers
     int[] items;
     int size;
-
+private static int RFACTOR = 2;
 
 
 
@@ -31,6 +31,7 @@ private void resize(int capacity){
 //inserts x into the back of the list
 public void insertBack(int x){
   //  items[] = x;
+  int items[];
   if(size == item.length){
       int[] a = new int[size + 1];
       System.arraycopy(items,0,a,0,size);
@@ -67,6 +68,15 @@ public int deleteBack(){
     return itemToReturn;
 
     }
+    public static void main(String[] args){
+        Alist  a1 = new Alist();
+        int i = 0;
+        while(i < 1000){
+            a1.insertBack(i);
+            i = i + 1;
+        }
+        System.out.println("Done");
+    }
 }
 /*
 Resizing array code 
@@ -93,5 +103,26 @@ public void insertBack(int x){
     items[size] = x;
     size += 1;
 }
+------------------------------
+------------------------------
+Bad Solution
+public void insertBack(int x){
+    if(size == items.length){
+        resize(size + RFACTOR);
+    }
+    items[size] = x;
+    size += 1;
+}
+
+Gooo solution
+public void insertBack(int x){
+    if(size == items.length){
+        resize(size * RFACTOR);
+    }
+    items[size] = x;
+    size += 1;
+}
+
+
 
 */
