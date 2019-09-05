@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Elk",
+            "request": "launch",
+            "mainClass": "Elk"
+        }
+    ]
+}
