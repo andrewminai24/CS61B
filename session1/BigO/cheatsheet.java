@@ -10,4 +10,18 @@ O(N^2) Quadratic- every element in a collection needs to be compared to every ot
 
 0(n!) Factorial- you are adding a loop for every element.
 
-i
+O(2^n) - Exponential.
+
+
+
+*/
+public class Cheatsheet{
+    public static void main(String[] args){
+        //O(1)
+        //constant time
+        System.out.println(numbers[0]);
+        System.out.println(numbers[0]);
+
+
+    }
+}
